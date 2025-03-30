@@ -1,0 +1,46 @@
+.holder {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr 1fr;
+    gap: 2px;
+    width: 400px;
+    height: 200px;
+    background: black;
+    border-radius: 18px;
+    padding: 2px;
+    grid-template-areas:
+    "one one five five"
+    "three two two four";
+}
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+}
+.item:nth-child(1) {
+    background: red; 
+    grid-area: one;
+    border-top-left-radius: 18px;
+}
+.item:nth-child(2){
+    background: blue;
+    grid-area: two;
+}
+.item:nth-child(3){
+    background: purple;
+    grid-area: three;
+    border-bottom-left-radius: 0 !important;
+}
+.item:nth-child(4){
+    background: green;
+    grid-area: four;
+    border-bottom-right-radius: 0 !important;
+}
+.item:nth-child(5){
+    background: yellow;
+    grid-area: five;
+    border-top-right-radius: 18px;
+}
